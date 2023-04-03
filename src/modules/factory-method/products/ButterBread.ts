@@ -2,7 +2,8 @@ import { type Bread, BreadSize } from '../BreadFactory'
 
 export class ButterBread implements Bread {
   name = 'Butter Bread'
-  description = ''
+  description =
+    'The best butter bread in the world. Indulge your self! Ingredients: Butter, Flour, Salt, Yeast, Sugar, Water'
   size: BreadSize
   slice: boolean
   boxed: boolean = false
@@ -11,6 +12,7 @@ export class ButterBread implements Bread {
   constructor(size: BreadSize, slice: boolean) {
     this.size = size
     this.slice = slice
+    this.calculatePrice()
   }
 
   calculatePrice() {

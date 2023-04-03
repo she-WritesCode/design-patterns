@@ -11,6 +11,7 @@ export class SardineBread implements Bread {
   constructor(size: BreadSize, slice: boolean) {
     this.size = size
     this.slice = slice
+    this.calculatePrice()
   }
 
   calculatePrice() {
